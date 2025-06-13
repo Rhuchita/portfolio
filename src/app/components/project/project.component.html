@@ -1,0 +1,27 @@
+<section class="projects-section animate-fadeInUp" aria-labelledby="projects-title" tabindex="0">
+  <h2 id="projects-title">Projects</h2>
+
+  <div class="projects-grid">
+    <article *ngFor="let project of projects" class="project-card card" tabindex="0">
+      <div class="project-image-wrapper">
+        <img 
+          [src]="project.imageUrl" 
+          [alt]="'Screenshot of ' + project.title" 
+          loading="lazy" 
+          class="project-image"
+        />
+      </div>
+      <div class="project-content">
+        <h3 class="project-title">{{ project.title }}</h3>
+        <p class="project-description">{{ project.description }}</p>
+        <ul class="project-tech" [attr.aria-label]="project.title + ' tech stack'">
+            <li *ngFor="let tech of project.techStack">{{ tech }}</li>
+        </ul>
+        <a *ngIf="project.url" [href]="project.url" target="_blank" rel="noopener noreferrer" class="btn-link" [attr.aria-label]="'View' + project.title + 'details'">
+          View Project
+        </a>
+      </div>
+    </article>
+  </div>
+</section>
+

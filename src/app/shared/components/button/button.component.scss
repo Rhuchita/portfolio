@@ -1,0 +1,27 @@
+.btn {
+    cursor: pointer;
+    border: none;
+    border-radius: var(--border-radius);
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 0.75rem 1.5rem;
+    background-color: var(--color-primary);
+    color: #fff;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 14px rgba(79, 70, 229, 0.4);
+    user-select: none;
+  }
+  
+  .btn:hover,
+  .btn:focus {
+    background-color: var(--color-primary-light);
+    outline: none;
+    transform: translateY(-2px);
+  }
+  
+  .btn:disabled {
+    background-color: var(--color-border);
+    cursor: not-allowed;
+    box-shadow: none;
+  }
+  

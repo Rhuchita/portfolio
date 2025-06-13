@@ -1,1 +1,170 @@
 /* You can add global styles to this file, and also import other style files */
+/* Import font family */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
+
+/* CSS Variables for theming */
+:root {
+  --color-bg: #f9fafb;
+  --color-primary: #cc99a8; /* Indigo-600 */
+  --color-primary-light: #f5e0e4; /* Indigo-300 */
+  --color-text-primary: #96284f;
+  --color-text-secondary: #b76e79;
+  --color-text-tertiary: #580c1f;
+  --color-border: #cd9777;
+  --color-shadow: rgba(79, 70, 229, 0.2);
+
+  --font-family: 'Inter', sans-serif;
+
+  --spacing-base: 16px;
+  --spacing-lg: 32px;
+  --spacing-xl: 48px;
+  --border-radius: 12px;
+}
+
+/* Global reset and box-sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-family);
+  background-color: var(--color-bg);
+  color: var(--color-text-primary);
+  line-height: 1.6;
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
+}
+
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover,
+a:focus {
+  color: var(--color-primary-light);
+  outline: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 800;
+  margin-top: 0;
+  margin-bottom: var(--spacing-base);
+  color: var(--color-text-primary);
+}
+
+p {
+  margin: 0 0 var(--spacing-base) 0;
+  color: var(--color-text-secondary);
+}
+
+/* Containers */
+.container {
+  width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--spacing-base);
+  padding-right: var(--spacing-base);
+}
+
+/* Section spacing */
+section {
+  padding-top: var(--spacing-xl);
+  padding-bottom: var(--spacing-xl);
+}
+
+/* Utility classes */
+.text-center {
+  text-align: center;
+}
+
+/* Cards (used in Projects, Skills, Experience) */
+.card {
+  background: #fff;
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius);
+  box-shadow: 0 8px 20px var(--color-shadow);
+  padding: var(--spacing-lg);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover,
+.card:focus-within {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 32px var(--color-shadow);
+}
+
+/* Button base */
+button {
+  cursor: pointer;
+  border: none;
+  border-radius: var(--border-radius);
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 0.75rem 1.5rem;
+  background-color: var(--color-primary);
+  color: #fff;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 14px rgba(79, 70, 229, 0.4);
+}
+
+button:hover,
+button:focus {
+  background-color: var(--color-primary-light);
+  outline: none;
+  transform: translateY(-2px);
+}
+
+/* Animation for fade-in sections */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Scroll reveal animation class */
+.animate-fadeInUp {
+  animation: fadeInUp 0.8s ease forwards;
+  opacity: 0; /* will be revealed by JS or when in viewport */
+}
+
+/* Header sticky */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: #fff;
+  border-bottom: 1px solid var(--color-border);
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* Focus visible for accessibility */
+:focus-visible {
+  outline: 3px solid var(--color-primary-light);
+  outline-offset: 2px;
+}
+
+/* Responsive breakpoints */
+@media (max-width: 640px) {
+  .container {
+    max-width: 90%;
+  }
+  button {
+    width: 100%;
+  }
+}

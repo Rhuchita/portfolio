@@ -1,0 +1,116 @@
+.projects-section {
+    width: 96vw;
+    margin: 0 auto;
+    color: var(--color-text-primary);
+    padding: 0rem 0;
+    text-align: center;
+  }
+  
+  .projects-section h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    font-weight: 800;
+    color: var(--color-primary);
+  }
+  
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+  
+  .project-card {
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    border-radius: var(--border-radius);
+    box-shadow: 0 8px 20px var(--color-shadow);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .project-card:hover,
+  .project-card:focus-within {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 40px var(--color-shadow);
+    outline: none;
+    cursor: pointer;
+  }
+  
+  .project-image-wrapper {
+    width: 100%;
+    overflow: hidden;
+    max-height: 180px;
+  }
+  
+  .project-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+  }
+  
+  .project-card:hover .project-image,
+  .project-card:focus-within .project-image {
+    transform: scale(1.05);
+  }
+  
+  .project-content {
+    padding: 1.25rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+  }
+  
+  .project-title {
+    font-weight: 700;
+    font-size: 1.25rem;
+    margin: 0 0 0.5rem 0;
+  }
+  
+  .project-description {
+    font-size: 1rem;
+    color: var(--color-text-secondary);
+    margin-bottom: 1rem;
+    flex-grow: 1;
+    line-height: 1.5;
+  }
+  
+  .project-tech {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1rem 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: start;
+  }
+  
+  .project-tech li {
+    background-color: var(--color-primary-light);
+    color: white;
+    font-weight: 600;
+    font-size: 0.8rem;
+    padding: 4px 5px;
+    border-radius: 20px;
+    user-select: none;
+  }
+  
+  .btn-link {
+    align-self: flex-start;
+    background: var(--color-primary);
+    color: white;
+    padding: 0.5rem 1.25rem;
+    border-radius: var(--border-radius);
+    font-weight: 600;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-link:hover,
+  .btn-link:focus {
+    background: var(--color-primary-light);
+    outline: none;
+  }
+  

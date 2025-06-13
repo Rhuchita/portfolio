@@ -1,0 +1,25 @@
+<article
+  class="about-card"
+  appScrollReveal
+  tabindex="0"
+  aria-labelledby="about-title"
+  role="region"
+>
+  <!-- <h2 id="about-heading" class="about-title">About Me</h2> -->
+  <div class="about-content container">
+    <div class="about-text">
+      <h3 class="name">{{ fullName }}</h3>
+      <p class="profession">{{ profession }}</p>
+      <p class="intro-text">{{ introText }}</p>
+    </div>
+    <div class="about-images">
+      <img
+        src="/assets/images/developer-about-me.png"
+        alt="Modern developer portrait in a creative workspace, digital art style, colorful and vibrant, sourced from Freepik"
+        class="about-image"
+        loading="lazy"
+        onerror="this.style.display='none'"
+      />
+    </div>
+  </div>
+</article>

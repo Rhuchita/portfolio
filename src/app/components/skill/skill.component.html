@@ -1,0 +1,29 @@
+<section
+  class="skills-section animate-fadeInUp"
+  aria-labelledby="skills-title"
+  tabindex="0"
+>
+  <h2 id="skills-title">Skills</h2>
+  <div class="skills-grid">
+    <div
+      *ngFor="let skill of skills"
+      class="skill-card"
+      role="listitem"
+      tabindex="0"
+      [attr.aria-label]="
+        skill.name + ' proficiency ' + skill.proficiency + ' percent'
+      "
+    >
+      <div class="skill-icon" aria-hidden="true">
+        <span class="material-icons">{{ skill.icon }}</span>
+      </div>
+      <div class="skill-info">
+        <h3 class="skill-name">{{ skill.name }}</h3>
+        <div class="skill-bar-bg" aria-hidden="true">
+          <div class="skill-bar-fill" [style.width.%]="skill.proficiency"></div>
+        </div>
+        <span class="skill-proficiency">{{ skill.proficiency }}%</span>
+      </div>
+    </div>
+  </div>
+</section>

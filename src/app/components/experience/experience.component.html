@@ -1,0 +1,18 @@
+<section class="experience-section animate-fadeInUp" aria-labelledby="experience-title" tabindex="0">
+  <h2 id="experience-title">Experience</h2>
+  <ul class="timeline" role="list">
+    <li *ngFor="let exp of experiences; let i = index" class="timeline-item" [class.left]="i % 2 === 0" [class.right]="i % 2 === 1" tabindex="0">
+      
+      <div class="timeline-content" role="region" [attr.aria-label]="'Experience at ' + exp.company + ', position ' + exp.position">
+        <span class="timeline-date">{{ exp.startDate }} - {{ exp.endDate }}</span>
+        <h3 class="position">{{ exp.position }}</h3>
+        <span class="company-location">{{ exp.company }}<span *ngIf="exp.location">, {{ exp.location }}</span></span>
+        <p class="experience-description">{{ exp.description }}</p>
+        <ul class="experience-tech" aria-label="Technologies used" *ngIf="exp.technologies?.length">
+          <li *ngFor="let tech of exp.technologies">{{ tech }}</li>
+        </ul>
+      </div>
+    </li>
+  </ul>
+</section>
+
